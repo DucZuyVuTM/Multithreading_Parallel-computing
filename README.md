@@ -258,7 +258,6 @@ Blocking-нагрузка - идеальный сценарий для вирт�
 Input → Validation → Calculation → Transformation → Result
 ```
 
-```
 | Стадия | Метод | Почему |
 |---|---|---|
 | Validation | `supplyAsync` | Начало async-цепочки, проверка данных |
@@ -266,7 +265,6 @@ Input → Validation → Calculation → Transformation → Result
 | Transformation | `thenApply` | Обычное преобразование `Double → Result` |
 | Timeout | `orTimeout(2, SECONDS)` | Ограничение на всю цепочку |
 | Ошибка | `exceptionally` | Формирует `Result.failure(...)` |
-```
 
 **`thenApply` vs `thenCompose`:** первый - синхронных преобразований,
 второй - для асинхронных операций, возвращающих новый
